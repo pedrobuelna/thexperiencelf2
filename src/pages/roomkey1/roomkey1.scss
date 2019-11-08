@@ -1,0 +1,9 @@
+page-roomkey1 {
+
+}
+.content_room{background: #eeefab;}
+.txt5{font-size: 23px;font-weight: 600;display: block;text-align: center;margin-top: 53px;margin-bottom: 80px;}
+.content_buton_key{width: 238px;height: 238px;border-radius: 50%;background: black;vertical-align: middle;color: white;text-align: center;font-size: 25px;text-transform: capitalize;margin: auto;-webkit-box-shadow: 0px 17px 25px -23px rgba(0,0,0,0.72);-moz-box-shadow: 0px 17px 25px -23px rgba(0,0,0,0.72);box-shadow: 0px 17px 25px -23px rgba(0,0,0,0.72);    font-weight: 400;}
+.content_buton_key .button-effect{background: url(../../assets/imgs/llave.png);width: 27px;height: 27px;display: block;background-repeat: no-repeat;background-size: 100%;opacity: 1;margin: auto;background-color: white;position: absolute;left: calc(50% - 13.5px);bottom: 50%;border-radius: 0;}
+.content_buton_key.activated{opacity: 0.75;}
+.button{white-space: normal;}

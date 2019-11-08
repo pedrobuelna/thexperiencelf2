@@ -1,0 +1,27 @@
+btn-header {
+    display: block;
+    .grid-btns {
+        padding-top: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        .grid-btn-nav {
+            flex-wrap: nowrap;
+            font-family: HelveticaRegular;
+            font-size: 1rem;
+        }
+        .col-btn {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .col-btn:first-child {
+            justify-content: flex-start;
+        }
+        .col-btn:last-child {
+            justify-content: flex-end;
+        }
+        .grid-title {
+            font-size: 2rem;
+            font-family: HelveticaBold;
+        }
+    }
+}

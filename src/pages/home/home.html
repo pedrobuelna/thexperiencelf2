@@ -1,0 +1,65 @@
+
+<ion-header class="bordeBajo" >
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <div>
+        <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">
+      </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!-- <div class="date-label">No date selected</div>
+    <div class="inline-datepicker"></div> -->
+  <div class="background1 padding">
+    <div class="content1 ion-padding ">
+      <p class="text1 ion-text-center">
+        <span class="bold">Spring Sale:15% Off </span><br>
+        Book early, save more <br>
+        Expires Feb. 19,2019  
+      </p>
+    </div>
+    <ion-grid>
+  <ion-row>
+    <ion-col class="ion-padding content_forms">
+      <div>
+        <div class="backgroundForm">
+          <ion-row>
+            <ion-col class="ion-padding">
+              <div class="input_content">
+                <input type="text" name="checkinout" placeholder="Check in/ Checkout"  (click)="onclickPageCalendar()">
+                <ion-icon name="calendar" (click)="onclickPageCalendar()"> </ion-icon>
+              </div>
+              <div class="input_content">
+                  <select class="combo1">
+                    <option value="1">1 Guest</option>
+                  </select>
+                  <ion-icon name="arrow-down"></ion-icon>
+              </div>
+              <div class="linksContent clearfix">
+                <div class="">
+                  <button  class="link1 left" ion-button color="light" (click)="onclickPageSignin()" clear>Sign In</button>
+                </div>
+                <div class="">
+                  <button  class="link1 right" ion-button color="light" clear>Special Rates</button>
+                </div>  
+              </div>
+              
+              <div class="boton_content">
+                <button ion-button full color="dark">see availability</button>
+              </div>
+            </ion-col>
+          </ion-row>
+          
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  </div>
+
+</ion-content>
+
+

@@ -1,0 +1,18 @@
+<!-- Generated template for the BtnsAcordeonComponent component -->
+<ul class="ul-img-acordeon">
+    <ng-template ngFor let-item let-position="index" let-isLast="last" [ngForOf]="btnItems">
+        <li [style.z-index]="getZIndex(position)"
+            [style.transform]="getTransForm(position)"
+            [style.height.px]="btnSize"
+            [style.width.px]="btnSize">
+            <img [src]="item.img" alt="">
+        </li>
+        <li *ngIf="isLast" 
+            [style.z-index]="getZIndex(position+1)" 
+            [style.transform]="getTransForm(position+1)"
+            [style.height.px]="btnSize"
+            [style.width.px]="btnSize">
+            <span>+{{btnPlus}}</span>
+        </li>
+    </ng-template>
+</ul>

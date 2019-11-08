@@ -1,0 +1,117 @@
+<ion-menu [content]="content" type="overlay">
+    <ion-header>
+        <ion-navbar>
+            <button ion-button menuToggle>
+                <ion-icon name="close"></ion-icon>
+            </button>
+            <div>
+                <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">
+            </div>
+        </ion-navbar>
+    </ion-header>
+    <ion-content class="menu_abierto">
+        <ion-list>
+            <span class="txt_menu">
+                Rewards club
+            </span> 
+            <ng-template ngFor let-page [ngForOf]="pages"> 
+                <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.subPageOffer" ion-item>
+                    {{page?.title}}
+                </button>
+                <ng-container *ngIf="page?.subPage">
+                    <button ion-item (click)="openSubMenu(page)">
+                        {{page?.title}}
+                    </button>
+                    <ion-list [style.height.px]="calculateHeight(page.subPage)" [ngClass]="page?.statusClass" class="submenu_content">
+                        <button 
+                            menuClose
+                            ion-item 
+                            (click)="openPage(subPage)" 
+                            *ngFor="let subPage of page.subPage" 
+                            [ngClass]="page?.statusClassList"
+                            class="txtSubmenu">{{subPage?.title}}</button>
+                    </ion-list>
+                </ng-container>
+                <ng-container *ngIf="page.subPageOffer">
+                    <button (click)="openSubMenu(page)" ion-item class="content_offers1">
+                        <span class="title_offers">{{page?.title}}</span>
+                    </button>
+                    <ion-list [style.height.px]="calculateHeightOffer(page)" [ngClass]="'submenu_content-' + page?.title + '-s ' + page?.statusClass" class="submenu_content submenu_content-offers">
+                        <div *ngFor="let offer of page.subPageOffer" class="content_offers">
+                            <span class="txt2">{{offer?.title}}</span><br>
+                            <span class="txt4">
+                                {{offer?.description}}
+                            </span>
+                        </div>
+                    </ion-list>
+                </ng-container>
+            </ng-template>
+            <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                {{p.title}}
+            </button> -->
+            <!-- <button menuClose ion-item>
+                Login
+                <ion-list class="submenu_content">
+                    <button menuClose ion-item class="txtSubmenu">Rooms</button>
+                    <button menuClose ion-item class="txtSubmenu">Gallery</button>
+                    <button menuClose ion-item class="txtSubmenu">Amenities</button>
+                    <img src="../../assets/imgs/fondo_menu.png" alt="" class="fondo_menu">
+                </ion-list>
+            </button> -->
+            <!-- <button menuClose ion-item class="content_offers1">
+                <span class="title_offers">Offers</span>
+                <ion-list class="submenu_content">
+                    <div class="content_offers">
+                        <span class="txt2">pick yours savings sale</span><br>
+                        <span class="txt4">
+                            rooms from $145 $98
+                            up to 35 off
+                        </span>
+                    </div>
+                    <div class="content_offers">
+                    <span class="txt2">limit time only</span><br>
+                    <span class="txt4">
+                        suite escape: exclusive rates
+                    </span>
+                    </div>
+                    <div class="content_offers">
+                    <span class="txt2">xperience suites</span><br>
+                    <span class="txt4">
+                        vip upgrade
+                    </span>
+                    </div>
+                    <div class="content_offers">
+                    <span class="txt2">carnaval packages</span><br>
+                    <span class="txt4">
+                        includes $100 bar tab
+                    </span>
+                    </div>
+                </ion-list>
+                <img src="../../assets/imgs/fondo_menu.png" alt="" class="fondo_menu_offers">
+            </button> -->
+        </ion-list>
+    <div class="footer_menu">
+      <img src="../../assets/imgs/logo3.png" alt="logo3" class="logo3">
+      <ul id="menuList" class="clearfix">
+          <li><a href='#' rel=''>Location</a></li>
+          <li><a href='#' rel=''>Phone</a></li>
+          <li><a href='#' rel=''>Email</a></li>
+          <li><a href='#' rel=''>Instagram</a></li>
+          <li><a href='#' rel=''>Facebook</a></li>
+      </ul>
+      <div class="clearfix">
+          <div class="col2 left">
+              <img alt="logo4" class="logo4" src="../../assets/imgs/tripadvisor.png">
+          </div>
+          <div class="col2 left iconos_menu">
+              <ion-icon name="search" role="img" class="icon icon-md ion-md-search" aria-label="search" ng-reflect-name="search"></ion-icon>
+              <ion-icon name="person" ion-button menuToggle (click)="openLogin()" role="img" class="icon icon-md ion-md-person" aria-label="person" ng-reflect-name="person"></ion-icon>
+              <ion-icon name="cart" role="img" class="icon icon-md ion-md-cart" aria-label="cart" ng-reflect-name="cart"></ion-icon>
+          </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

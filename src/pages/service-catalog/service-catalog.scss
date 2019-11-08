@@ -1,0 +1,17 @@
+page-service-catalog {
+    .scroll-content {
+        margin-bottom: 10px;
+        background: url("../../assets/imgs/fondo1.png");width: 100%;background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;min-height: 100%;
+    }
+    .subcontent_service {
+        min-height: 158px;
+        position: relative;
+        margin-bottom: 22px;
+        .clearfix {
+            position: absolute;
+            width: 100%;
+            bottom: 16px;
+            left: 20px;
+        }
+    }
+}

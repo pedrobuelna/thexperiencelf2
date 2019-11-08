@@ -1,0 +1,83 @@
+page-activities-menu-details {
+    .scroll-content {
+        background-color: $color-azul-primary;
+    }
+    .grid-activities-detail {
+        .title {
+            padding-left: 46px !important;
+            padding-right: 46px !important;
+            padding-top: 30px !important;
+            font-family: HelveticaNeueBold;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+        .descripcion {
+            padding-left: 46px !important;
+            padding-right: 46px !important;
+            padding-bottom: 30px !important;
+            font-family: HelveticaNeueRegular;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+        .grid-activities-menu-description-row {
+            background-color: white;
+            justify-content: space-evenly;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            btns-acordeon {
+                transform: translateX(22%);
+            }
+            ion-col:first-child {
+                display: flex;
+                align-items: center;
+                font-family: HelveticaNeueBold;
+                font-size: 2rem;
+            }
+            ion-col:last-child {
+                font-family: HelveticaNeueRegular;
+            }
+        }
+        .grid-activities-menu-img {
+            position: relative;
+            img {
+                height: 460px;
+                object-fit: cover;
+                object-position: center
+            }
+            .mensaje-servicio {
+                width: 270px;
+                height: 270px;
+                position: absolute;
+                border-radius: 50%;
+                background-color: $color-azul-primary;
+                opacity: 0.8;
+                top: 38%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .mensaje-servicio-title {
+                    font-size: 3.4rem;
+                    text-align: center;
+                    margin-bottom: 28px;
+                }
+                .mensaje-servicio-date {
+                    font-size: 1.7rem;
+                    padding: 0 44px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    ion-footer {
+        button {
+            font-family: HelveticaNeueRegular;
+            text-transform: none !important;
+            font-size: 13px;
+            border-bottom: 3px solid $color-azul-primary;
+            border-top: 3px solid $color-azul-primary;
+        }
+    }
+}   

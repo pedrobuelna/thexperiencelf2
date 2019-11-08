@@ -1,0 +1,53 @@
+page-activities-menu {
+    .scroll-content {
+        background-color: $color-azul-primary;
+    }
+    .grid-activities-menu {
+        background-color: white;
+        .grid-activities-menu-img {
+            ion-col {
+                display: flex;
+                
+                img {
+                    width: 96%;
+                    height: 152px;
+                    object-fit: cover;
+                }
+            }
+            ion-col:first-child {
+                justify-content: flex-start;
+            }
+            ion-col:last-child {
+                justify-content: flex-end;
+            }
+        }
+        .grid-activities-menu-description {
+            flex-wrap: nowrap;
+            margin-bottom: 20px;            
+            .grid-activities-menu-description-row {
+                btns-acordeon {
+                    transform: translateX(22%);
+                }
+                ion-col:first-child {
+                    display: flex;
+                    align-items: center;
+                    font-family: HelveticaNeueBold;
+                }
+                ion-col:last-child {
+                    font-family: HelveticaNeueRegular;
+                }
+            }
+            p {
+                color: black;
+                opacity: 0.45;
+                font-family: HelveticaNeueRegular;
+            }
+        }
+        .grid-activities-menu-description > ion-col {
+            padding-left: 5px !important;
+        }
+        .grid-activities-menu-description > ion-col:first-child {
+            margin-right: 2%;
+        }
+    }
+}

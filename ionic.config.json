@@ -1,0 +1,7 @@
+{
+  "name": "proyectexperience",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

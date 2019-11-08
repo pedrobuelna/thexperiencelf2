@@ -1,0 +1,9 @@
+page-services {
+    
+}
+.backgroundrgba{background: rgba(0, 0, 0, 0.54);width: 100%;position: absolute;background-attachment: fixed;top:0;}
+.icon_service{width: 24px;display:inline-block;vertical-align:middle;}
+.content_service{position: relative;}
+.subcontent_service{background: black;width: 80%;margin: 0px auto 4px;padding: 30px 15px 10px;box-sizing: border-box;min-height: 69px;}
+.content_service .subcontent_service:first{margin-top: 7px;}
+.text5{color: white;font-size: 17px;font-weight: 600;width: calc(100% - 25px);    display: inline-block;vertical-align: middle;}

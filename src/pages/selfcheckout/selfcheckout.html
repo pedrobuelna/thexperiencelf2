@@ -1,0 +1,41 @@
+<!--
+  Generated template for the SelfcheckinPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="bordeBajo" >
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+        <div>
+          <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">
+        </div>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content class="selfcheckout">
+  <div class="title_content1">
+    <span class="txt_content1">Self Check-out</span>
+  </div>
+  <div class="content_form2">
+      <div class="content_stay">
+          <div class="contentinput_stay">
+              <ion-label>Name</ion-label>
+              <ion-input name="checkin"></ion-input>
+          </div>
+          <div class="contentinput_stay">
+              <ion-label>Last Name</ion-label>
+              <ion-input name="checkout"></ion-input>
+          </div>
+          <div class="boton_content applycode">
+              <button ion-button full color="dark"  (click)="onclickPageSeeyou()">apply code</button>
+          </div>
+        </div>
+  </div>
+  <div class="menus_down clearfix">
+      <span class="left txt2" (click)="onclickPagePop()">Back to main menu</span>
+      <span class="right txt2">Stay options</span>
+  </div>
+</ion-content>

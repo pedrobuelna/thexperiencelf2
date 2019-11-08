@@ -1,0 +1,89 @@
+page-home {
+    font-family: HelveticaNeue;
+}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+
+.bar-button-menutoggle-md ion-icon,
+.bar-button-menutoggle-ios ion-icon {
+    font-size: 5.4rem;
+    margin-top: -10px;
+}
+page-signin ion-content {
+    contain: size style;
+    background: url(../../assets/imgs/fondo1.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100%;
+}
+.text-input::-moz-placeholder{color: #000 !important;}
+.text-input:-ms-input-placeholder{color: #000 !important;}
+.text-input::-webkit-input-placeholder{color: #000 !important;}
+.scroll-content{bottom: -10px;}
+img{display: block;width: 100%;}
+.col4{width: 33.33%;}
+.txtSubmenu ion-label{font-size: 16px;text-transform: initial;margin: 3px 8px 3px 0;}
+.item-block{min-height: 0;}
+.txt4{font-size: 14px;}
+.txt_menu{font-size: 20px;padding-left: 16px;text-transform: uppercase;}
+.menu_abierto .item-inner{background-image: none !important;border-bottom:0 !important;padding: 0 !important;}
+.menu_abierto .item-block{border-top:0 !important;border-bottom:none !important;font-size: 20px;}
+// .menu_abierto .submenu_content .item-block{padding: 0 !important;}
+.fondo_menu{position: absolute;top: -59px;height: 265px;width: 120px;right: 0;}
+.submenu_content .txtSubmenu{padding-left: 32px;}
+.content_offers{background: #EEEFAB;margin-bottom: 25px;padding: 12px 30px;}
+.content_offers1{padding:0 !important}
+.content_offers1 .label{margin-right: 0;}
+.content_offers:first-child{margin-top: 10px;}
+.title_offers{margin-left: 16px;}
+.fondo_menu_offers{top: 80px;z-index: -1;position: absolute;height: 160px;width: 110px;right: 0;}
+.input-wrapper{text-transform: uppercase;}
+.toolbar-background{border: none !important;}
+.bordeBajo{border-bottom: 7px solid #d2dcdf;}
+.logo{width: 63%;margin: 4px 10px 4px 0;float: right;}
+.content1{padding: 40px 0 19px;}
+.background1{background: url("../../assets/imgs/fondo1.png");width: 100%;background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;min-height: 100%;}
+.toolbar-background{background: white;}
+.logo3{max-width: 195px;}
+.logo4{max-width: 110px;margin-left: 15px;}
+.footer_menu{margin:0 15px 40px 25px;position: relative;bottom: 0px;}
+.back-button-icon-md{font-size: 40px;}
+.menu_abierto{margin-top: 20px;}
+.col2{width: 50%;}
+.iconos_menu{position: absolute;bottom: 0;right: 0;text-align: right;}
+.iconos_menu ion-icon{margin-right: 0;font-size: 25px;height: auto;border: none;background: white;color: black;display: inline-block;padding: 0;margin: 0 5px;vertical-align: middle;box-shadow: none;}
+.iconos_menu ion-icon:last-child{margin-right: 0;}
+ul#menuList{margin: 10px 0 20px 15px;padding: 0;}
+#menuList li{list-style: none;line-height: 26px;float: left;margin-right: 5px;}
+#menuList li:after{content: "|";margin-left: 5px;}
+#menuList li:nth-child(3):after{content:""}
+#menuList li a{text-decoration: none;color: black;font-size: 16px;}
+.text1{font-size: 25px;color: #fff;margin: 0;text-align: center;}
+.bold{font-family: HelveticaNeue;font-weight: 600;}
+.backgroundForm{color: #e8e7e8;background: rgba(234, 234, 234, 0.75);padding:10px 20px 0}
+.link1{color: #000;font-size: 17px;text-transform: initial;text-decoration: underline;}
+.linksContent{margin-bottom: 20px}
+.clearfix:after{content: "";display: block;clear: both;}
+.menu{width: 56px;height: 22px; margin-top: 15px; float: right;}
+.btn1{height: 66px;font-size: 17px;}
+.left{float: left;}
+.right{float: right;}
+.center{text-align: center;}
+.input_content{position: relative;margin-bottom: 25px;}
+:focus{outline: none;}
+::placeholder,::-webkit-input-placeholder{color: black;}
+input{font-size: 17px}
+select{font-size: 17px}
+input[type=text],input[type=password],
+input[type=email],input[type=number]{width: 100%; height: 50px; background: transparent; color: black; border: none; border-bottom: 3px solid #d2dcdf; padding: 0 10px;-moz-appearance: none;-ms-appearance: none;-webkit-appearance: none;appearance: none;}
+
+input[type=text]:focus,input[type=password]:focus,input[type=email]:focus,input[type=number]{box-shadow: none;}
+.combo1{width: 100%;height: 50px; color: black; border: none; border-bottom: 3px solid #d2dcdf; border-radius: 0; background: transparent; padding: 0 10px;-webkit-appearance: none;-moz-appearance: none;}
+.button-full{height: 60px;text-transform: uppercase;font-size: 17px}
+.bar-button{color: #d2dcdf}
+ion-icon[name="calendar"]{position: absolute; right: 0px; top: 4px; color: black; font-size: 40px;}
+ion-icon[name="arrow-down"]{position: absolute; right: 0px; top: 7px; color: black; font-size: 40px;}
+.separador_content{text-align: center;border-top: 3px solid #DFDFD1;padding: 15px;border-bottom: 3px solid #DFDFD1;margin: 40px 17px 0;}
+.title2{font-size:26px;font-weight: 600;}
+.error1{color: red;font-size:10px;margin-left: 10px;}

@@ -1,0 +1,194 @@
+page-cart {
+
+    .scroll-content {
+        margin-bottom: 10px;
+    }
+
+    $list-cart-border-color: #E0E0E0;
+    $list-cart-thumbnail: 90px;
+    
+    .list-cart {
+        margin-top: 7px;
+        padding-left: 14px;
+        padding-right: 14px;    
+        margin-bottom: 40px;
+        .item-inner {
+            border-bottom: 0 !important;
+            .input-wrapper {
+                align-items: flex-start;
+            }
+        }
+        .item-block:not(:last-child) {
+            border-bottom: 1px solid $list-cart-border-color;
+        }
+        .item-block:first-child {
+            border-top: 1px solid $list-cart-border-color;
+        }
+        .item-block:last-child {
+            border-bottom: 1px solid $list-cart-border-color;
+        }
+        .item-block {
+            padding-left: 22px;
+            .list-cart-thumbnail {
+                margin: 24px 18px 24px 0;
+                img {
+                    width: $list-cart-thumbnail;
+                    height: $list-cart-thumbnail;
+                }
+            }
+            .input_content {
+                margin-bottom: 10px;
+                width: 64%;
+                .combo1 {
+                    height: 32px;
+                    border-bottom-color: #F7D895;
+                }
+                ion-icon {
+                    font-size: 15px;
+                    top: 8px;
+                    right: 8px;
+                }
+            }
+            ion-label {
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+            .title {
+                text-transform: none;
+                opacity: 0.45;
+                white-space: normal;
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+            .description {
+                text-transform: none;
+                color: black;
+                opacity: 0.45;
+                font-weight: 500;
+            }
+        }
+    }
+
+    $margin-bottom-grid-rows: 18px;
+    $padding-vertical: 25px;
+
+    .grid-cart-total {
+        margin-bottom: 50px;
+        ion-col {
+            padding: 0;
+        }
+        .grid-cart-total-title {
+            font-size: 2.2rem;
+            font-weight: bolder;
+            margin-bottom: 22px;
+            padding-left: $padding-vertical;
+            padding-right: $padding-vertical;
+            font-family: HelveticaNeueBold;
+        }
+        .grid-cart-total-subtotals {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 36px;
+            padding-left: $padding-vertical;
+            padding-right: $padding-vertical;
+            .text {
+                color: black;
+                opacity: 0.45;
+                font-family: HelveticaNeueRegular;
+            }
+            .value {
+                text-align: right;
+                font-family: HelveticaNeueBold;
+            }
+        }
+        .grid-cart-add-promo {
+            margin-bottom: $margin-bottom-grid-rows;
+            padding-left: $padding-vertical;
+            padding-right: $padding-vertical;
+            button {
+                font-family: HelveticaNeueBold;
+                font-weight: bolder;
+                font-size: 1.5rem;
+                margin-left: 0;
+                padding-left: 0;
+                padding-right: 10px;
+                ion-icon {
+                    font-weight: bolder;
+                }
+            }
+        }
+        .grid-cart-info {
+            height: 65px;
+            font-weight: bold;
+            background-color: $color-amarillo-primary;
+            font-family: HelveticaNeueBold;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        .grid-cart-pay {
+            button {
+                font-family: HelveticaNeueRegular;
+                text-transform: none;
+                font-size: 13px;
+                border-bottom: 3px solid $color-azul-primary;
+                border-top: 3px solid $color-azul-primary;
+            }
+        }
+    }
+    .grid-footer-links {
+        padding-left: 37px;
+        padding-right: 37px;
+        .grid-footer-links-tabs {
+            font-weight: bolder;
+            margin-bottom: 32px;
+            font-family: HelveticaNeueBold;
+        }
+        .grid-footer-links-description {
+            color: black;
+            opacity: 0.45;
+            ion-col {
+                font-family: HelveticaNeueRegular;
+                text-align: center;
+                line-height: 2.2;
+                font-size: 1.2rem;
+            }
+        }
+        .grid-footer-btn-tiendas {
+            font-family: HelveticaNeueBold;
+            margin-bottom: 25px;
+            ion-col {
+                text-align: center;
+                button {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        .grid-footer-social-links {
+            margin-bottom: 25px;
+            img {
+                height: 26px;
+                width: 26px;
+            }
+        }
+        .grid-footer-politicas {
+            font-family: HelveticaNeueRegular;
+            font-size: 1.2rem;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 22px;
+            ion-col {
+                button {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+        .grid-footer-derechos {
+            margin-bottom: 22px;
+            font-family: HelveticaNeueRegular;
+            font-size: 1.4rem;
+            color: black;
+            opacity: 0.45;
+        }
+    }
+}

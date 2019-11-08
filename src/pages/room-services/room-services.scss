@@ -1,0 +1,25 @@
+page-room-services {
+    .scroll-content {
+        background-color: $color-azul-primary;
+    }
+    .card-service {
+        border-radius: 0;
+        position: relative;
+        .card-service-img {
+            margin-bottom: 36px;
+        }
+        .card-service-title {
+            position: absolute;
+            bottom: 56px;
+            right: 16px;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 1.8rem;
+        }
+        btns-acordeon {
+            position: absolute;
+            bottom: 52px;
+            left: 16px;
+        }
+    }
+}
