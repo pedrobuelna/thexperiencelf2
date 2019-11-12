@@ -17,6 +17,7 @@ page-signin ion-content {
     background-size: 100% 100%;
     min-height: 100%;
 }
+
 .text-input::-moz-placeholder{color: #000 !important;}
 .text-input:-ms-input-placeholder{color: #000 !important;}
 .text-input::-webkit-input-placeholder{color: #000 !important;}
@@ -25,7 +26,7 @@ img{display: block;width: 100%;}
 .col4{width: 33.33%;}
 .txtSubmenu ion-label{font-size: 16px;text-transform: initial;margin: 3px 8px 3px 0;}
 .item-block{min-height: 0;}
-.txt4{font-size: 14px;}
+.txt4{font-size: 14px;line-height: 18px;text-transform: uppercase;}
 .txt_menu{font-size: 20px;padding-left: 16px;text-transform: uppercase;}
 .menu_abierto .item-inner{background-image: none !important;border-bottom:0 !important;padding: 0 !important;}
 .menu_abierto .item-block{border-top:0 !important;border-bottom:none !important;font-size: 20px;}
@@ -37,7 +38,8 @@ img{display: block;width: 100%;}
 .content_offers1 .label{margin-right: 0;}
 .content_offers:first-child{margin-top: 10px;}
 .title_offers{margin-left: 16px;}
-.fondo_menu_offers{top: 80px;z-index: -1;position: absolute;height: 160px;width: 110px;right: 0;}
+.block{display: block !important;}
+.fondo_menu_offers{bottom: 209px;z-index: -1;position: absolute;height: 210px;right: 0;width: 120px;display: none;}
 .input-wrapper{text-transform: uppercase;}
 .toolbar-background{border: none !important;}
 .bordeBajo{border-bottom: 7px solid #d2dcdf;}

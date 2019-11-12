@@ -1,4 +1,4 @@
-webpackJsonp([20],{
+webpackJsonp([21],{
 
 /***/ 100:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7,7 +7,7 @@ webpackJsonp([20],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signin_signin__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signin_signin__ = __webpack_require__(196);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -76,79 +76,83 @@ var map = {
 		2
 	],
 	"../pages/activities-menu/activities-menu.module": [
-		274,
+		276,
 		1
 	],
 	"../pages/bienvenido/bienvenido.module": [
 		277,
-		17
+		18
 	],
 	"../pages/booked/booked.module": [
-		279,
-		16
+		278,
+		17
 	],
 	"../pages/calendario/calendario.module": [
-		276,
+		279,
 		4
 	],
+	"../pages/calendario2/calendario2.module": [
+		280,
+		16
+	],
 	"../pages/cart/cart.module": [
-		278,
+		281,
 		15
 	],
 	"../pages/home/home.module": [
-		280,
+		282,
 		14
 	],
 	"../pages/login/login.module": [
-		281,
-		19
+		283,
+		20
 	],
 	"../pages/prueba/prueba.module": [
-		282,
+		285,
 		13
 	],
 	"../pages/room-services/room-services.module": [
-		283,
+		284,
 		0
 	],
 	"../pages/roomkey1/roomkey1.module": [
-		284,
+		286,
 		12
 	],
 	"../pages/roomkey2/roomkey2.module": [
-		285,
+		287,
 		11
 	],
 	"../pages/seeyou/seeyou.module": [
-		286,
+		288,
 		10
 	],
 	"../pages/selfcheckin/selfcheckin.module": [
-		287,
+		289,
 		9
 	],
 	"../pages/selfcheckout/selfcheckout.module": [
-		289,
+		291,
 		8
 	],
 	"../pages/service-catalog/service-catalog.module": [
-		288,
+		290,
 		7
 	],
 	"../pages/services/services.module": [
-		290,
+		292,
 		6
 	],
 	"../pages/signin/signin.module": [
-		292,
-		18
+		294,
+		19
 	],
 	"../pages/subservice-catalog/subservice-catalog.module": [
-		291,
+		293,
 		5
 	],
 	"../pages/yourstay/yourstay.module": [
-		293,
+		295,
 		3
 	]
 };
@@ -230,6 +234,44 @@ var GlobalVarsProvider = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatepickerHelperProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/*
+  Generated class for the DatepickerHelperProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var DatepickerHelperProvider = /** @class */ (function () {
+    function DatepickerHelperProvider() {
+        console.log('Hello DatepickerHelperProvider Provider');
+    }
+    DatepickerHelperProvider.svgArrow = '<?xml version="1.0" encoding="iso-8859-1"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 386.257 386.257" style="enable-background:new 0 0 386.257 386.257;" xml:space="preserve"><polygon points="0,96.879 193.129,289.379 386.257,96.879 "/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>';
+    DatepickerHelperProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], DatepickerHelperProvider);
+    return DatepickerHelperProvider;
+}());
+
+//# sourceMappingURL=datepicker-helper.js.map
+
+/***/ }),
+
+/***/ 196:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SigninPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
@@ -295,13 +337,13 @@ var SigninPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 196:
+/***/ 197:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(220);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -309,7 +351,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 219:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -317,18 +359,20 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(262);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_list_list__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_list_list__ = __webpack_require__(274);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(100);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_global_vars_global_vars__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_datepicker_helper_datepicker_helper__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -352,16 +396,17 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/activities-menu/activities-menu.module#ActivitiesMenuPageModule', name: 'ActivitiesMenuPage', segment: 'activities-menu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/activities-menu-details/activities-menu-details.module#ActivitiesMenuDetailsPageModule', name: 'ActivitiesMenuDetailsPage', segment: 'activities-menu-details', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/calendario/calendario.module#CalendarioPageModule', name: 'CalendarioPage', segment: 'calendario', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/activities-menu/activities-menu.module#ActivitiesMenuPageModule', name: 'ActivitiesMenuPage', segment: 'activities-menu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/bienvenido/bienvenido.module#BienvenidoPageModule', name: 'BienvenidoPage', segment: 'bienvenido', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/booked/booked.module#BookedPageModule', name: 'BookedPage', segment: 'booked', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/calendario/calendario.module#CalendarioPageModule', name: 'CalendarioPage', segment: 'calendario', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/calendario2/calendario2.module#Calendario2PageModule', name: 'Calendario2Page', segment: 'calendario2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/prueba/prueba.module#PruebaPageModule', name: 'PruebaPage', segment: 'prueba', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/room-services/room-services.module#RoomServicesPageModule', name: 'RoomServicesPage', segment: 'room-services', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/prueba/prueba.module#PruebaPageModule', name: 'PruebaPage', segment: 'prueba', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/roomkey1/roomkey1.module#Roomkey1PageModule', name: 'Roomkey1Page', segment: 'roomkey1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/roomkey2/roomkey2.module#Roomkey2PageModule', name: 'Roomkey2Page', segment: 'roomkey2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/seeyou/seeyou.module#SeeyouPageModule', name: 'SeeyouPage', segment: 'seeyou', priority: 'low', defaultHistory: [] },
@@ -385,7 +430,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_8__providers_global_vars_global_vars__["a" /* GlobalVarsProvider */]
+                __WEBPACK_IMPORTED_MODULE_8__providers_global_vars_global_vars__["a" /* GlobalVarsProvider */],
+                __WEBPACK_IMPORTED_MODULE_9__providers_datepicker_helper_datepicker_helper__["a" /* DatepickerHelperProvider */]
             ]
         })
     ], AppModule);
@@ -396,18 +442,18 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 262:
+/***/ 263:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_pages_constants__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_pages_constants__ = __webpack_require__(264);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_lodash__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_lodash__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_lodash__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_global_vars_global_vars__ = __webpack_require__(194);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -531,7 +577,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/app/app.html"*/'<ion-menu [content]="content" type="overlay">\n    <ion-header>\n        <ion-navbar>\n            <button ion-button menuToggle>\n                <ion-icon name="close"></ion-icon>\n            </button>\n            <div>\n                <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n            </div>\n        </ion-navbar>\n    </ion-header>\n    <ion-content class="menu_abierto">\n        <ion-list>\n            <span class="txt_menu">\n                Rewards club\n            </span> \n            <ng-template ngFor let-page [ngForOf]="pages"> \n                <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.subPageOffer" ion-item>\n                    {{page?.title}}\n                </button>\n                <ng-container *ngIf="page?.subPage">\n                    <button ion-item (click)="openSubMenu(page)">\n                        {{page?.title}}\n                    </button>\n                    <ion-list [style.height.px]="calculateHeight(page.subPage)" [ngClass]="page?.statusClass" class="submenu_content">\n                        <button \n                            menuClose\n                            ion-item \n                            (click)="openPage(subPage)" \n                            *ngFor="let subPage of page.subPage" \n                            [ngClass]="page?.statusClassList"\n                            class="txtSubmenu">{{subPage?.title}}</button>\n                    </ion-list>\n                </ng-container>\n                <ng-container *ngIf="page.subPageOffer">\n                    <button (click)="openSubMenu(page)" ion-item class="content_offers1">\n                        <span class="title_offers">{{page?.title}}</span>\n                    </button>\n                    <ion-list [style.height.px]="calculateHeightOffer(page)" [ngClass]="\'submenu_content-\' + page?.title + \'-s \' + page?.statusClass" class="submenu_content submenu_content-offers">\n                        <div *ngFor="let offer of page.subPageOffer" class="content_offers">\n                            <span class="txt2">{{offer?.title}}</span><br>\n                            <span class="txt4">\n                                {{offer?.description}}\n                            </span>\n                        </div>\n                    </ion-list>\n                </ng-container>\n            </ng-template>\n            <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n                {{p.title}}\n            </button> -->\n            <!-- <button menuClose ion-item>\n                Login\n                <ion-list class="submenu_content">\n                    <button menuClose ion-item class="txtSubmenu">Rooms</button>\n                    <button menuClose ion-item class="txtSubmenu">Gallery</button>\n                    <button menuClose ion-item class="txtSubmenu">Amenities</button>\n                    <img src="../../assets/imgs/fondo_menu.png" alt="" class="fondo_menu">\n                </ion-list>\n            </button> -->\n            <!-- <button menuClose ion-item class="content_offers1">\n                <span class="title_offers">Offers</span>\n                <ion-list class="submenu_content">\n                    <div class="content_offers">\n                        <span class="txt2">pick yours savings sale</span><br>\n                        <span class="txt4">\n                            rooms from $145 $98\n                            up to 35 off\n                        </span>\n                    </div>\n                    <div class="content_offers">\n                    <span class="txt2">limit time only</span><br>\n                    <span class="txt4">\n                        suite escape: exclusive rates\n                    </span>\n                    </div>\n                    <div class="content_offers">\n                    <span class="txt2">xperience suites</span><br>\n                    <span class="txt4">\n                        vip upgrade\n                    </span>\n                    </div>\n                    <div class="content_offers">\n                    <span class="txt2">carnaval packages</span><br>\n                    <span class="txt4">\n                        includes $100 bar tab\n                    </span>\n                    </div>\n                </ion-list>\n                <img src="../../assets/imgs/fondo_menu.png" alt="" class="fondo_menu_offers">\n            </button> -->\n        </ion-list>\n    <div class="footer_menu">\n      <img src="../../assets/imgs/logo3.png" alt="logo3" class="logo3">\n      <ul id="menuList" class="clearfix">\n          <li><a href=\'#\' rel=\'\'>Location</a></li>\n          <li><a href=\'#\' rel=\'\'>Phone</a></li>\n          <li><a href=\'#\' rel=\'\'>Email</a></li>\n          <li><a href=\'#\' rel=\'\'>Instagram</a></li>\n          <li><a href=\'#\' rel=\'\'>Facebook</a></li>\n      </ul>\n      <div class="clearfix">\n          <div class="col2 left">\n              <img alt="logo4" class="logo4" src="../../assets/imgs/tripadvisor.png">\n          </div>\n          <div class="col2 left iconos_menu">\n              <ion-icon name="search" role="img" class="icon icon-md ion-md-search" aria-label="search" ng-reflect-name="search"></ion-icon>\n              <ion-icon name="person" ion-button menuToggle (click)="openLogin()" role="img" class="icon icon-md ion-md-person" aria-label="person" ng-reflect-name="person"></ion-icon>\n              <ion-icon name="cart" role="img" class="icon icon-md ion-md-cart" aria-label="cart" ng-reflect-name="cart"></ion-icon>\n          </div>\n      </div>\n    </div>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/app/app.html"*/'<ion-menu [content]="content" type="overlay">\n    <ion-header>\n        <ion-navbar>\n            <button ion-button menuToggle>\n                <ion-icon name="close"></ion-icon>\n            </button>\n            <div>\n                <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n            </div>\n        </ion-navbar>\n    </ion-header>\n    <ion-content class="menu_abierto">\n        <ion-list>\n            <span class="txt_menu">\n                Rewards club\n            </span> \n            <ng-template ngFor let-page [ngForOf]="pages"> \n                <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.subPageOffer" ion-item>\n                    {{page?.title}}\n                </button>\n                <ng-container *ngIf="page?.subPage">\n                    <button ion-item (click)="openSubMenu(page)">\n                        {{page?.title}}\n                    </button>\n                    <ion-list [style.height.px]="calculateHeight(page.subPage)" [ngClass]="page?.statusClass" class="submenu_content">\n                        <button \n                            menuClose\n                            ion-item \n                            (click)="openPage(subPage)" \n                            *ngFor="let subPage of page.subPage" \n                            [ngClass]="page?.statusClassList"\n                            class="txtSubmenu">{{subPage?.title}}</button>\n                    </ion-list>\n                </ng-container>\n                <ng-container *ngIf="page.subPageOffer">\n                    <button (click)="openSubMenu(page)" ion-item class="content_offers1">\n                        <span class="title_offers">{{page?.title}}</span>\n                    </button>\n                    <ion-list [style.height.px]="calculateHeightOffer(page)" [ngClass]="\'submenu_content-\' + page?.title + \'-s \' + page?.statusClass" class="submenu_content submenu_content-offers">\n                        <div *ngFor="let offer of page.subPageOffer" class="content_offers">\n                            <span class="txt2">{{offer?.title}}</span><br>\n                            <span class="txt4">\n                                {{offer?.description}}\n                            </span>\n                        </div>\n                        <img src="../../assets/imgs/fondo_menu.png" alt="" class="fondo_menu_offers">\n                    </ion-list>\n                </ng-container>\n            </ng-template>\n            <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n                {{p.title}}\n            </button> -->\n            <!-- <button menuClose ion-item>\n                Login\n                <ion-list class="submenu_content">\n                    <button menuClose ion-item class="txtSubmenu">Rooms</button>\n                    <button menuClose ion-item class="txtSubmenu">Gallery</button>\n                    <button menuClose ion-item class="txtSubmenu">Amenities</button>\n                    <img src="../../assets/imgs/fondo_menu.png" alt="" class="fondo_menu">\n                </ion-list>\n            </button> -->\n            <!-- <button menuClose ion-item class="content_offers1">\n                <span class="title_offers">Offers</span>\n                <ion-list class="submenu_content">\n                    <div class="content_offers">\n                        <span class="txt2">pick yours savings sale</span><br>\n                        <span class="txt4">\n                            rooms from $145 $98\n                            up to 35 off\n                        </span>\n                    </div>\n                    <div class="content_offers">\n                    <span class="txt2">limit time only</span><br>\n                    <span class="txt4">\n                        suite escape: exclusive rates\n                    </span>\n                    </div>\n                    <div class="content_offers">\n                    <span class="txt2">xperience suites</span><br>\n                    <span class="txt4">\n                        vip upgrade\n                    </span>\n                    </div>\n                    <div class="content_offers">\n                    <span class="txt2">carnaval packages</span><br>\n                    <span class="txt4">\n                        includes $100 bar tab\n                    </span>\n                    </div>\n                </ion-list>\n                <img src="../../assets/imgs/fondo_menu.png" alt="" class="fondo_menu_offers">\n            </button> -->\n        </ion-list>\n        \n    <div class="footer_menu">\n      <img src="../../assets/imgs/logo3.png" alt="logo3" class="logo3">\n      <ul id="menuList" class="clearfix">\n          <li><a href=\'#\' rel=\'\'>Location</a></li>\n          <li><a href=\'#\' rel=\'\'>Phone</a></li>\n          <li><a href=\'#\' rel=\'\'>Email</a></li>\n          <li><a href=\'#\' rel=\'\'>Instagram</a></li>\n          <li><a href=\'#\' rel=\'\'>Facebook</a></li>\n      </ul>\n      <div class="clearfix">\n          <div class="col2 left">\n              <img alt="logo4" class="logo4" src="../../assets/imgs/tripadvisor.png">\n          </div>\n          <div class="col2 left iconos_menu">\n              <ion-icon name="search" role="img" class="icon icon-md ion-md-search" aria-label="search" ng-reflect-name="search"></ion-icon>\n              <ion-icon name="person" ion-button menuToggle (click)="openLogin()" role="img" class="icon icon-md ion-md-person" aria-label="person" ng-reflect-name="person"></ion-icon>\n              <ion-icon name="cart" role="img" class="icon icon-md ion-md-cart" aria-label="cart" ng-reflect-name="cart"></ion-icon>\n          </div>\n      </div>\n    </div>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */],
@@ -545,7 +591,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 263:
+/***/ 264:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -570,6 +616,7 @@ var MyApp = /** @class */ (function () {
 /* unused harmony export SUBSERVICE_CATALOG_PAGE */
 /* unused harmony export ACTIVITIES_MENU_PAGE */
 /* unused harmony export ACTIVITIES_MENU_DETAILS_PAGE */
+/* unused harmony export CALENDARIO2_PAGE */
 //Constants for getting type references
 var REGISTRO_PAGE = 'RegistroPage';
 var LOGIN_PAGE = 'LoginPage';
@@ -592,11 +639,12 @@ var SERVICE_CATALOG_PAGE = 'ServiceCatalogPage';
 var SUBSERVICE_CATALOG_PAGE = 'SubserviceCatalogPage';
 var ACTIVITIES_MENU_PAGE = 'ActivitiesMenuPage';
 var ACTIVITIES_MENU_DETAILS_PAGE = 'ActivitiesMenuDetailsPage';
+var CALENDARIO2_PAGE = 'Calendario2Page';
 //# sourceMappingURL=pages.constants.js.map
 
 /***/ }),
 
-/***/ 273:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -653,5 +701,5 @@ var ListPage = /** @class */ (function () {
 
 /***/ })
 
-},[196]);
+},[197]);
 //# sourceMappingURL=main.js.map

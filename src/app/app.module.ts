@@ -21,6 +21,7 @@ import { SeeyouPage } from '../pages/seeyou/seeyou';
 import { Roomkey1Page } from '../pages/roomkey1/roomkey1';
 import { Roomkey2Page } from '../pages/roomkey2/roomkey2';
 import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
+import { DatepickerHelperProvider } from '../providers/datepicker-helper/datepicker-helper';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
         StatusBar,
         SplashScreen,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
-        GlobalVarsProvider
+        GlobalVarsProvider,
+    DatepickerHelperProvider
     ]
 })
 export class AppModule {}

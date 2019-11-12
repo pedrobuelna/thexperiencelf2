@@ -20,3 +20,4 @@ export const SERVICE_CATALOG_PAGE = 'ServiceCatalogPage';
 export const SUBSERVICE_CATALOG_PAGE = 'SubserviceCatalogPage';
 export const ACTIVITIES_MENU_PAGE = 'ActivitiesMenuPage';
 export const ACTIVITIES_MENU_DETAILS_PAGE = 'ActivitiesMenuDetailsPage';
+export const CALENDARIO2_PAGE = 'Calendario2Page';

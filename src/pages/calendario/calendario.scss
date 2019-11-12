@@ -1,5 +1,53 @@
 page-calendario {
-
+    #datepicker {
+        display: none;
+    }
+    .calendario_content {
+        .datepicker-inline {
+            display: flex;
+            justify-content: center;
+            .datepicker--cell.-selected-.-focus- {
+                background-color: black;
+            }
+            .datepicker {
+                border: 0px solid #dbdbdb;
+            }
+            .datepicker--nav-title {
+                display: flex;
+                flex-direction: column;
+                font-size: 35px;
+                text-transform: uppercase;
+                i {
+                    font-size: 14px;
+                    color: black;
+                }
+            }
+            .datepicker--nav-action {
+                align-items: flex-start;
+                margin-top: 10px;
+                svg {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+            .datepicker--nav-action[data-action="prev"] {
+                svg {
+                    transform: rotate(90deg);
+                }
+            }
+            .datepicker--nav-action[data-action="next"] {
+                svg {
+                    transform: rotate(-90deg);
+                }
+            }
+            .datepicker--day-name {
+                color: black;
+            }
+        }
+        .datepicker {
+            font-family: HelveticaRegular;
+        }
+    }
 }
 .txt3{font-size: 8px;font-weight: 400;text-transform: uppercase;}
 .calendario_content{text-align: center;margin-top: 30px;margin-bottom: 50px;}
