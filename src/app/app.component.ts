@@ -96,6 +96,18 @@ export class MyApp {
 
     public calculateHeightOffer(page): number {
         let pageElement = document.querySelector(".submenu_content-"+page.title+"-s");
+
+        if(page.statusClass == "hide-menu")
+        {
+
+                document.querySelector(".fondo_menu_offers").classList.remove('block');
+                document.querySelector(".footer_menu").classList.remove('margen');
+        }else{
+            document.querySelector(".footer_menu").classList.add('margen');
+            setTimeout(function(){
+                document.querySelector(".fondo_menu_offers").classList.add('block');
+            },0)
+        }  
         let contentOffers = pageElement.querySelectorAll(".content_offers");
         let heightElements = 0;
         _.forEach(contentOffers, (item) => {

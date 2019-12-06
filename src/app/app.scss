@@ -30,6 +30,7 @@
     &.hide-menu {
         height: 0 !important;
     }
+    position: relative;
 }
 
 .width-100 {
@@ -43,4 +44,5 @@ button {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
+
 }

@@ -24,8 +24,8 @@ export class SigninPage {
     public navParams: NavParams,
     public formbuilder:FormBuilder) {
       this.formgroup = formbuilder.group({
-        email:['',[Validators.required,Validators.minLength(5)]],
-        nombre:['',[Validators.required,Validators.maxLength(15)]],
+        email:['',[Validators.required,Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$')]],
+        nombre:['',[Validators.required,Validators.minLength(5)]],
         apellido:['',Validators.required]
         
       });

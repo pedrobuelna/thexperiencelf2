@@ -5,10 +5,10 @@ webpackJsonp([16],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Calendario2PageModule", function() { return Calendario2PageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarioPageModule", function() { return CalendarioPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__calendario2__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__calendario__ = __webpack_require__(305);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var Calendario2PageModule = /** @class */ (function () {
-    function Calendario2PageModule() {
+var CalendarioPageModule = /** @class */ (function () {
+    function CalendarioPageModule() {
     }
-    Calendario2PageModule = __decorate([
+    CalendarioPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__calendario2__["a" /* Calendario2Page */],
+                __WEBPACK_IMPORTED_MODULE_2__calendario__["a" /* CalendarioPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__calendario2__["a" /* Calendario2Page */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__calendario__["a" /* CalendarioPage */]),
             ],
         })
-    ], Calendario2PageModule);
-    return Calendario2PageModule;
+    ], CalendarioPageModule);
+    return CalendarioPageModule;
 }());
 
-//# sourceMappingURL=calendario2.module.js.map
+//# sourceMappingURL=calendario.module.js.map
 
 /***/ }),
 
@@ -42,7 +42,7 @@ var Calendario2PageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Calendario2Page; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarioPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__providers_datepicker_helper_datepicker_helper__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(32);
@@ -59,19 +59,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the Calendario2Page page.
+ * Generated class for the CalendarioPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var Calendario2Page = /** @class */ (function () {
-    function Calendario2Page(navCtrl, navParams) {
+var CalendarioPage = /** @class */ (function () {
+    function CalendarioPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    Calendario2Page.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CalendarioPage2');
-        $('#datepicker2').datepicker({
+    CalendarioPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CalendarioPage');
+        $('#datepicker').datepicker({
             "navTitles": {
                 "days": 'yyyy <i>MM</i>',
             },
@@ -89,20 +89,23 @@ var Calendario2Page = /** @class */ (function () {
             "nextHtml": __WEBPACK_IMPORTED_MODULE_0__providers_datepicker_helper_datepicker_helper__["a" /* DatepickerHelperProvider */].svgArrow
         });
     };
-    Calendario2Page.prototype.onclickPagePop = function () {
+    CalendarioPage.prototype.onclickPagePop = function () {
         this.navCtrl.setRoot("HomePage", null, { direction: "back", animate: true });
     };
-    Calendario2Page = __decorate([
+    CalendarioPage.prototype.onclickCalendario2 = function () {
+        this.navCtrl.push("Calendario2Page");
+    };
+    CalendarioPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'page-calendario2',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/pages/calendario2/calendario2.html"*/'<!--\n  Generated template for the YourstayPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header class="bordeBajo" >\n    <ion-navbar>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n        <div>\n          <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n        </div>\n    </ion-navbar>\n  </ion-header>\n<ion-content padding class="calendario">\n  <div class="content_stay">\n    <div class="clearfix">\n        <span (click)="onclickPagePop()" class="left txt2">Back to hotel</span>\n        <span class="right txt2">Stay options</span>\n    </div>\n    <span class="title1">your stay</span>\n    <div class="clearfix">\n        <span class="left txt3">choose date</span>\n    </div>\n    <div class="calendario_content">\n        <input id="datepicker2" type="text" data-inline="true" data-language="en" />\n    </div>\n    <div class="boton_content ">\n        <button ion-button full color="dark" (click)="onclickPagePop()" >see availability</button>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/pages/calendario2/calendario2.html"*/,
+            selector: 'page-calendario',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/pages/calendario/calendario.html"*/'<!--\n  Generated template for the YourstayPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header class="bordeBajo" >\n    <ion-navbar>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n        <div>\n          <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n        </div>\n    </ion-navbar>\n  </ion-header>\n<ion-content padding class="calendario">\n  <div class="content_stay">\n    <div class="clearfix">\n        <span (click)="onclickPagePop()" class="left txt2">Back to hotel</span>\n        <span class="right txt2">Stay options</span>\n    </div>\n    <span class="title1">your stay</span>\n    <div class="clearfix">\n        <span class="left txt3">choose date</span>\n    </div>\n    <div class="calendario_content">\n        <input id="datepicker" type="text" data-inline="true" data-language="en" />\n    </div>\n    <div class="boton_content ">\n        <button ion-button full color="dark" (click)="onclickCalendario2()">see availability</button>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/pages/calendario/calendario.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
-    ], Calendario2Page);
-    return Calendario2Page;
-    var _a, _b;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavParams */]])
+    ], CalendarioPage);
+    return CalendarioPage;
 }());
 
-//# sourceMappingURL=calendario2.js.map
+//# sourceMappingURL=calendario.js.map
 
 /***/ })
 

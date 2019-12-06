@@ -21,23 +21,31 @@
   </div>
   <div class="content_form2">
       <div class="content_stay">
-          <img src="../../assets/imgs/fondo_formulario.png" alt="fondo" class="fondo_palmera">
-          <div class="contentinput_stay">
-              <ion-label>Name</ion-label>
-              <ion-input name="checkin"></ion-input>
-          </div>
-          <div class="contentinput_stay">
-              <ion-label>Last Name</ion-label>
-              <ion-input name="checkout"></ion-input>
-          </div>
-          <div class="contentinput_stay">
-              <ion-label>Confirmation Code</ion-label>
-              <ion-input name="number_adults" type="number"></ion-input>
-          </div>
-          <div class="boton_content applycode" (click)="onclickPageBienvenido()">
-              <button ion-button full color="dark">apply code</button>
-              <span class="desc1 txt2">CLICK APPLY TO CHECK-IN AND GET ROOM KEY</span>
-          </div>
+          <form action="bienvenido.html" [formGroup]="formgroup"  id="form3_1" name="form3_1">
+              <img src="../../assets/imgs/fondo_formulario.png" alt="fondo" class="fondo_palmera">
+              <div class="contentinput_stay">
+                  <ion-label>Name</ion-label>
+                  <ion-input formControlName="checkin"></ion-input>
+                  <span class="error1" *ngIf="checkin.hasError('required') && checkin.touched ">Rellene el Campo</span>
+                  <span class="error1" *ngIf="checkin.hasError('minlength') && checkin.touched ">5 Caractéres minimo</span>
+              </div>
+              <div class="contentinput_stay">
+                  <ion-label>Last Name</ion-label>
+                  <ion-input formControlName="checkout"></ion-input>
+                  <span class="error1" *ngIf="checkout.hasError('required') && checkout.touched ">Rellene el Campo</span>
+                  <span class="error1" *ngIf="checkout.hasError('minlength') && checkout.touched ">5 Caractéres minimo</span>
+              </div>
+              <div class="contentinput_stay">
+                  <ion-label>Confirmation Code</ion-label>
+                  <ion-input formControlName="number_adults" type="number"></ion-input>
+                  <span class="error1" *ngIf="number_adults.hasError('required') && number_adults.touched ">Rellene el Campo</span>
+              </div>
+              <div class="boton_content applycode">
+                  <button ion-button full color="dark" type="submit" [disabled]="formgroup.invalid">apply code</button>
+                  <span class="desc1 txt2">CLICK APPLY TO CHECK-IN AND GET ROOM KEY</span>
+              </div>
+          </form>
+          
   </div>
 </div>
 <div class="menus_down clearfix">

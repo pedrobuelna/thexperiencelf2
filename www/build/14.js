@@ -5,10 +5,10 @@ webpackJsonp([14],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartPageModule", function() { return CartPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(306);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HomePageModule = /** @class */ (function () {
-    function HomePageModule() {
+var CartPageModule = /** @class */ (function () {
+    function CartPageModule() {
     }
-    HomePageModule = __decorate([
+    CartPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]),
             ],
         })
-    ], HomePageModule);
-    return HomePageModule;
+    ], CartPageModule);
+    return CartPageModule;
 }());
 
-//# sourceMappingURL=home.module.js.map
+//# sourceMappingURL=cart.module.js.map
 
 /***/ }),
 
-/***/ 299:
+/***/ 306:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CartPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,52 +57,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the HomePage page.
+ * Generated class for the CartPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var HomePage = /** @class */ (function () {
-    function HomePage(platform, navCtrl, navParams) {
-        this.platform = platform;
+var CartPage = /** @class */ (function () {
+    function CartPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    HomePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad HomePage');
-        this.platform.ready().then(function () {
-            // cordova.plugins.DatePicker.create(
-            //     document.querySelector('.inline-datepicker'),
-            //     {
-            //         'id': 'date-from-picker-1', // this should be the unique identifier of the picker
-            //         'mode': cordova.plugins.DatePicker.Mode.DATE, // default is DATE_AND_TIME
-            //         'date': new Date('2016-11-24T'),
-            //         'minimumDate': new Date()
-            //     },
-            //     function (data) {
-            //         // this callback is called everytime input is changed
-            //         // document.querySelector('.date-label').innerText = new Date(data.date).toLocaleDateString();
-            //     }
-            // );
-        });
+    CartPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CartPage');
     };
-    HomePage.prototype.onclickPageSignin = function () {
-        this.navCtrl.push("SigninPage");
-    };
-    HomePage.prototype.onclickPageCalendar = function () {
-        this.navCtrl.push("CalendarioPage");
-    };
-    HomePage = __decorate([
+    CartPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/pages/home/home.html"*/'\n<ion-header class="bordeBajo" >\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n      <div>\n        <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n      </div>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <!-- <div class="date-label">No date selected</div>\n    <div class="inline-datepicker"></div> -->\n  <div class="background1 padding">\n    <div class="content1 ion-padding ">\n      <p class="text1 ion-text-center">\n        <span class="bold">Spring Sale:15% Off </span><br>\n        Book early, save more <br>\n        Expires Feb. 19,2019  \n      </p>\n    </div>\n    <ion-grid>\n  <ion-row>\n    <ion-col class="ion-padding content_forms">\n      <div>\n        <div class="backgroundForm">\n          <ion-row>\n            <ion-col class="ion-padding">\n              <div class="input_content">\n                <input type="text" name="checkinout" placeholder="Check in/ Checkout"  (click)="onclickPageCalendar()">\n                <ion-icon name="calendar" (click)="onclickPageCalendar()"> </ion-icon>\n              </div>\n              <div class="input_content">\n                  <select class="combo1">\n                    <option value="1">1 Guest</option>\n                  </select>\n                  <ion-icon name="arrow-down"></ion-icon>\n              </div>\n              <div class="linksContent clearfix">\n                <div class="">\n                  <button  class="link1 left" ion-button color="light" (click)="onclickPageSignin()" clear>Sign In</button>\n                </div>\n                <div class="">\n                  <button  class="link1 right" ion-button color="light" clear>Special Rates</button>\n                </div>  \n              </div>\n              \n              <div class="boton_content">\n                <button ion-button full color="dark">see availability</button>\n              </div>\n            </ion-col>\n          </ion-row>\n          \n        </div>\n      </div>\n    </ion-col>\n  </ion-row>\n</ion-grid>\n  </div>\n\n</ion-content>\n\n\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/pages/home/home.html"*/,
+            selector: 'page-cart',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/pages/cart/cart.html"*/'<!--\n  Generated template for the CartPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header class="bordeBajo">\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <div>\n            <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n        </div>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list class="list-cart">\n        <ion-item>\n            <ion-thumbnail class="list-cart-thumbnail" item-start>\n                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/11/20/0/fnd_beer-istock.jpg.rend.hgtvcom.616.462.suffix/1448031613421.jpeg">\n            </ion-thumbnail>\n            <h2 class="title">Artisinal IPA</h2>\n            <div class="input_content">\n                <select class="combo1">\n                    <option value="1">US 7.5</option>\n                </select>\n                <ion-icon name="arrow-down"></ion-icon>\n            </div>\n            <p class="description">Only 1 left in stock</p>\n        </ion-item>\n        <ion-item>\n            <ion-thumbnail class="list-cart-thumbnail" item-start>\n                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/11/20/0/fnd_beer-istock.jpg.rend.hgtvcom.616.462.suffix/1448031613421.jpeg">\n            </ion-thumbnail>\n            <h2 class="title">Artisinal IPA</h2>\n            <div class="input_content">\n                <select class="combo1">\n                    <option value="1">US 7.5</option>\n                </select>\n                <ion-icon name="arrow-down"></ion-icon>\n            </div>\n            <p class="description">Only 1 left in stock</p>\n        </ion-item>\n        <ion-item>\n            <ion-thumbnail class="list-cart-thumbnail" item-start>\n                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/11/20/0/fnd_beer-istock.jpg.rend.hgtvcom.616.462.suffix/1448031613421.jpeg">\n            </ion-thumbnail>\n            <h2 class="title">Artisinal IPA</h2>\n            <div class="input_content">\n                <select class="combo1">\n                    <option value="1">US 7.5</option>\n                </select>\n                <ion-icon name="arrow-down"></ion-icon>\n            </div>\n            <p class="description">Only 1 left in stock</p>\n        </ion-item>\n    </ion-list>\n    <ion-grid no-padding class="grid-cart-total">\n        <ion-row class="grid-cart-total-title">\n            <ion-col>Cart Total</ion-col>\n        </ion-row>\n        <ion-row class="grid-cart-total-subtotals">\n            <ion-col class="text">Subtotal</ion-col>\n            <ion-col class="value">$1,320</ion-col>\n        </ion-row>\n        <ion-row class="grid-cart-add-promo">\n            <ion-col>\n                <button class="border-amarillo-primary" color="color-negro-primary" small clear ion-button icon-start>\n                    <ion-icon name="add"></ion-icon>\n                    Use promotion\n                </button>\n            </ion-col>\n        </ion-row>\n        <ion-row  class="grid-cart-info" justify-content-around align-items-center>\n            <ion-col col-auto>$1,452</ion-col>\n            <ion-col col-auto>Proceed to shipping</ion-col>\n        </ion-row>\n        <ion-row class="grid-cart-pay">\n            <ion-col>\n                <button no-margin color="color-negro-primary" ion-button full>Check out and pay with finger print!</button>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n    <ion-grid class="grid-footer-links">\n        <ion-row class="grid-footer-links-tabs" text-uppercase justify-content-between>\n            <ion-col col-auto>Shop</ion-col>\n            <ion-col col-auto>Our Story</ion-col>\n            <ion-col col-auto>Press</ion-col>\n        </ion-row>\n        <ion-row class="grid-footer-links-description">\n            <ion-col>Discover the best products, curated by a community with great taste.</ion-col>\n        </ion-row>\n        <ion-row class="grid-footer-btn-tiendas">\n            <ion-col>\n                <button color="color-negro-primary" ion-button clear icon-end>\n                    DOWNLOAD FOR iOS\n                    <ion-icon name="arrow-dropright"></ion-icon>\n                </button>\n                <button color="color-negro-primary" ion-button clear icon-end>\n                    DOWNLOAD FOR ANDROID\n                    <ion-icon name="arrow-dropright"></ion-icon>\n                </button>\n            </ion-col>\n        </ion-row>\n        <ion-row justify-content-center class="grid-footer-social-links">\n            <ion-col col-auto>\n                <img src="../../assets/imgs/twitter.png" alt="">\n            </ion-col>\n            <ion-col col-auto>\n                <img src="../../assets/imgs/instagram.png" alt="">\n            </ion-col>\n            <ion-col col-auto>\n                <img src="../../assets/imgs/facebook.png" alt="">\n            </ion-col>\n        </ion-row>\n        <ion-row class="grid-footer-politicas">\n            <ion-col col-auto>\n                <button color="colorcustom1" ion-button clear>Privacy Policy</button>\n            </ion-col>\n            <ion-col col-auto>\n                <button color="colorcustom1" ion-button clear>Terms and Conditions</button>\n            </ion-col>\n        </ion-row>\n        <ion-row class="grid-footer-derechos">\n            <ion-col>© 2017 Adobe Systems Incorporated. All rights reserved. Any reference to Ginchy or any associated logos is for demonstration purposes only and is not intended to refer to any actual organization or event.</ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/pages/cart/cart.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], HomePage);
-    return HomePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], CartPage);
+    return CartPage;
 }());
 
-//# sourceMappingURL=home.js.map
+//# sourceMappingURL=cart.js.map
 
 /***/ })
 

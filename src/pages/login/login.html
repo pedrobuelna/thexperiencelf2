@@ -29,24 +29,28 @@
         <div class="backgroundForm">
           <ion-row>
             <ion-col class="ion-padding">
-              <form action="login.html" name="login" ng-submit="sendForm()">
+              <form [formGroup]="formgroup" id="form2_1" name="form2_1">
                 <div class="input_content">
-                  <input type="email" name="email" placeholder="Email" ng-model="email">
+                  <input type="email" formControlName="email" placeholder="Email">
+                  <span class="error1" *ngIf="email.hasError('required') && password.touched">Rellene el Campo</span>
+                  <span class="error1" *ngIf="email.hasError('pattern') && email.touched">Ejemplo correo@dominio.com</span>
                 </div>
                 <div class="input_content">
-                  <input type="password" name="password" placeholder="Password" required>
+                  <input type="password" formControlName="password" placeholder="Password" required>
+                  <span class="error1" *ngIf="password.hasError('required') && password.touched ">Rellene el Campo</span>
+                  <span class="error1" *ngIf="password.hasError('minlength') && password.touched ">5 Caractéres minimo</span>
                 </div>
                 <div class="linksContent clearfix">
                   <div class="">
                     <a href="#" class="link1 left">Reset password</a>
                   </div>
                   <div class="">
-                    <a href="#" class="link1 right" (click)="onclickPageSignin()" >Sign in</a>
+                    <a href="#" class="link1 right" (click)="onclickPageSignin()">Sign in</a>
                   </div>  
                 </div>
                 
                 <div class="boton_content">
-                  <button ion-button full color="dark" type="submit">Log in</button>
+                  <button ion-button full color="dark" type="submit" [disabled]="formgroup.invalid">Log in</button>
                 </div>
               </form>
             </ion-col>

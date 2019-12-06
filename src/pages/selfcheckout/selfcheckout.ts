@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {FormBuilder, FormGroup, Validators, AbstractControl} from '@angular/forms';
 
 /**
  * Generated class for the SelfcheckoutPage page.
@@ -14,10 +15,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'selfcheckout.html',
 })
 export class SelfcheckoutPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  formgroup:FormGroup;
+  nombre:AbstractControl;
+  apellido:AbstractControl;
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams,
+    public formbuilder:FormBuilder) {
+      this.formgroup = formbuilder.group({
+        nombre:['',[Validators.required,Validators.minLength(5)]],
+        apellido:['',[Validators.required,Validators.minLength(5)]],
+        
+      });
+      this.nombre = this.formgroup.controls["nombre"];
+      this.apellido = this.formgroup.controls["apellido"];
   }
-
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad SelfcheckoutPage');
   }

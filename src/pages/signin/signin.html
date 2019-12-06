@@ -29,11 +29,12 @@
         <div class="backgroundForm">
           <ion-row>
             <!-- <form [formGroup]="formgroup" (ngSubmit)="enviar()" col-12> -->
-                <form [formGroup]="formgroup" col-12>
+                <form [formGroup]="formgroup" id="form1_1" name="form1_1" col-12>
                 <ion-col class="ion-padding">
                     <div class="input_content">
                       <ion-input type="text" formControlName="nombre" placeholder="Nombre"></ion-input>
                       <span class="error1" *ngIf="nombre.hasError('required') && nombre.touched ">Rellene el Campo</span>
+                      <span class="error1" *ngIf="nombre.hasError('minlength') && nombre.touched ">Minimo 5 caractéres</span>
                       <!-- <input type="text" placeholder="Nombre">
                       <span class="error1">Rellene el Campo</span> -->
                     </div>
@@ -41,15 +42,18 @@
                         <ion-input type="text" formControlName="apellido" placeholder="Apellido"></ion-input>
                         <!-- <input type="text" placeholder="Apellido"> -->
                         <span class="error1" *ngIf="apellido.hasError('required') && apellido.touched ">Rellene el Campo</span>
+                        <span class="error1" *ngIf="apellido.hasError('minlength') && apellido.touched ">Minimo 5 caractéres</span>
                       </div>
                     <div class="input_content">
                         <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
                         <!-- <input type="email" placeholder="Email"> -->
-                        <span class="error1" *ngIf="email.hasError('required') && email.touched" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address">Rellene el Campo</span>
+                        <span class="error1" *ngIf="email.hasError('required') && email.touched">Rellene el Campo</span>
+                        <span class="error1" *ngIf="email.hasError('pattern') && email.touched">Ejemplo correo@dominio.com</span>
+                        
                     </div>
                     <div class="boton_content">
                         <!-- [disabled]="!isenabled" -->
-                      <button ion-button full color="dark" class="boton" (click)="onclickPageServices()">sign in</button>
+                      <button ion-button full color="dark" class="boton" [disabled]="formgroup.invalid" (click)="onclickPageServices()">sign in</button>
                     </div>
                   </ion-col>
             </form>

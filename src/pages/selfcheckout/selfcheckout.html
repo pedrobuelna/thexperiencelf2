@@ -20,19 +20,26 @@
     <span class="txt_content1">Self Check-out</span>
   </div>
   <div class="content_form2">
-      <div class="content_stay">
-          <div class="contentinput_stay">
-              <ion-label>Name</ion-label>
-              <ion-input name="checkin"></ion-input>
-          </div>
-          <div class="contentinput_stay">
-              <ion-label>Last Name</ion-label>
-              <ion-input name="checkout"></ion-input>
-          </div>
-          <div class="boton_content applycode">
-              <button ion-button full color="dark"  (click)="onclickPageSeeyou()">apply code</button>
-          </div>
-        </div>
+      <form action="" id="form4_1" name="form4_1" [formGroup]="formgroup">
+          <div class="content_stay">
+              <div class="contentinput_stay">
+                  <ion-label>Name</ion-label>
+                  <ion-input formControlName="nombre" type="text"></ion-input>
+                  <span class="error1" *ngIf="nombre.hasError('required') && nombre.touched ">Rellene el Campo</span>
+                  <span class="error1" *ngIf="nombre.hasError('minlength') && nombre.touched ">5 Caractéres minimo</span>
+              </div>
+              <div class="contentinput_stay">
+                  <ion-label>Last Name</ion-label>
+                  <ion-input formControlName="apellido" type="text"></ion-input>
+                  <span class="error1" *ngIf="apellido.hasError('required') && apellido.touched ">Rellene el Campo</span>
+                  <span class="error1" *ngIf="apellido.hasError('minlength') && apellido.touched ">5 Caractéres minimo</span>
+              </div>
+              <div class="boton_content applycode">
+                  <button ion-button full color="dark"  (click)="onclickPageSeeyou()">apply code</button>
+              </div>
+            </div>
+      </form>
+      
   </div>
   <div class="menus_down clearfix">
       <span class="left txt2" (click)="onclickPagePop()">Back to main menu</span>

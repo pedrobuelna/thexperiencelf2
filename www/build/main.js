@@ -8,6 +8,7 @@ webpackJsonp([21],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__signin_signin__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,6 +21,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -27,9 +29,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var LoginPage = /** @class */ (function () {
-    function LoginPage(navCtrl, navParams) {
+    function LoginPage(navCtrl, navParams, formbuilder) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.formbuilder = formbuilder;
+        this.formgroup = formbuilder.group({
+            email: ['', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$')]],
+            password: ['', [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].minLength(5)]]
+        });
+        this.email = this.formgroup.controls["email"];
+        this.password = this.formgroup.controls["password"];
     }
     LoginPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad LoginPage');
@@ -39,9 +48,11 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header class="bordeBajo" >\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n      <div>\n        <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n      </div>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	 <div class="background1 padding">\n    <div class="content1 ion-padding ">\n      <p class="text1 ion-text-center">\n        <span class="bold">Log in to Xperience</span>\n      </p>\n    </div>\n    <ion-grid>\n  <ion-row>\n    <ion-col class="ion-padding">\n      <div>\n        <div class="backgroundForm">\n          <ion-row>\n            <ion-col class="ion-padding">\n              <form action="login.html" name="login" ng-submit="sendForm()">\n                <div class="input_content">\n                  <input type="email" name="email" placeholder="Email" ng-model="email">\n                </div>\n                <div class="input_content">\n                  <input type="password" name="password" placeholder="Password" required>\n                </div>\n                <div class="linksContent clearfix">\n                  <div class="">\n                    <a href="#" class="link1 left">Reset password</a>\n                  </div>\n                  <div class="">\n                    <a href="#" class="link1 right" (click)="onclickPageSignin()" >Sign in</a>\n                  </div>  \n                </div>\n                \n                <div class="boton_content">\n                  <button ion-button full color="dark" type="submit">Log in</button>\n                </div>\n              </form>\n            </ion-col>\n          </ion-row>\n          \n        </div>\n      </div>\n    </ion-col>\n  </ion-row>\n</ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header class="bordeBajo" >\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n      <div>\n        <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n      </div>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	 <div class="background1 padding">\n    <div class="content1 ion-padding ">\n      <p class="text1 ion-text-center">\n        <span class="bold">Log in to Xperience</span>\n      </p>\n    </div>\n    <ion-grid>\n  <ion-row>\n    <ion-col class="ion-padding">\n      <div>\n        <div class="backgroundForm">\n          <ion-row>\n            <ion-col class="ion-padding">\n              <form [formGroup]="formgroup" id="form2_1" name="form2_1">\n                <div class="input_content">\n                  <input type="email" formControlName="email" placeholder="Email">\n                  <span class="error1" *ngIf="email.hasError(\'required\') && password.touched">Rellene el Campo</span>\n                  <span class="error1" *ngIf="email.hasError(\'pattern\') && email.touched">Ejemplo correo@dominio.com</span>\n                </div>\n                <div class="input_content">\n                  <input type="password" formControlName="password" placeholder="Password" required>\n                  <span class="error1" *ngIf="password.hasError(\'required\') && password.touched ">Rellene el Campo</span>\n                  <span class="error1" *ngIf="password.hasError(\'minlength\') && password.touched ">5 Caractéres minimo</span>\n                </div>\n                <div class="linksContent clearfix">\n                  <div class="">\n                    <a href="#" class="link1 left">Reset password</a>\n                  </div>\n                  <div class="">\n                    <a href="#" class="link1 right" (click)="onclickPageSignin()">Sign in</a>\n                  </div>  \n                </div>\n                \n                <div class="boton_content">\n                  <button ion-button full color="dark" type="submit" [disabled]="formgroup.invalid">Log in</button>\n                </div>\n              </form>\n            </ion-col>\n          </ion-row>\n          \n        </div>\n      </div>\n    </ion-col>\n  </ion-row>\n</ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -88,60 +99,60 @@ var map = {
 		17
 	],
 	"../pages/calendario/calendario.module": [
-		279,
-		4
-	],
-	"../pages/calendario2/calendario2.module": [
 		280,
 		16
 	],
-	"../pages/cart/cart.module": [
-		281,
+	"../pages/calendario2/calendario2.module": [
+		279,
 		15
 	],
-	"../pages/home/home.module": [
+	"../pages/cart/cart.module": [
 		282,
 		14
+	],
+	"../pages/home/home.module": [
+		281,
+		13
 	],
 	"../pages/login/login.module": [
 		283,
 		20
 	],
 	"../pages/prueba/prueba.module": [
-		285,
-		13
+		284,
+		12
 	],
 	"../pages/room-services/room-services.module": [
-		284,
+		285,
 		0
 	],
 	"../pages/roomkey1/roomkey1.module": [
 		286,
-		12
-	],
-	"../pages/roomkey2/roomkey2.module": [
-		287,
 		11
 	],
-	"../pages/seeyou/seeyou.module": [
+	"../pages/roomkey2/roomkey2.module": [
 		288,
 		10
 	],
+	"../pages/seeyou/seeyou.module": [
+		287,
+		9
+	],
 	"../pages/selfcheckin/selfcheckin.module": [
 		289,
-		9
+		8
 	],
 	"../pages/selfcheckout/selfcheckout.module": [
 		291,
-		8
-	],
-	"../pages/service-catalog/service-catalog.module": [
-		290,
 		7
 	],
-	"../pages/services/services.module": [
+	"../pages/service-catalog/service-catalog.module": [
 		292,
 		6
+	],
+	"../pages/services/services.module": [
+		290,
+		5
 	],
 	"../pages/signin/signin.module": [
 		294,
@@ -149,7 +160,7 @@ var map = {
 	],
 	"../pages/subservice-catalog/subservice-catalog.module": [
 		293,
-		5
+		4
 	],
 	"../pages/yourstay/yourstay.module": [
 		295,
@@ -275,7 +286,7 @@ var DatepickerHelperProvider = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SigninPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -300,8 +311,8 @@ var SigninPage = /** @class */ (function () {
         this.navParams = navParams;
         this.formbuilder = formbuilder;
         this.formgroup = formbuilder.group({
-            email: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].minLength(5)]],
-            nombre: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(15)]],
+            email: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$')]],
+            nombre: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].minLength(5)]],
             apellido: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required]
         });
         this.email = this.formgroup.controls["email"];
@@ -324,7 +335,7 @@ var SigninPage = /** @class */ (function () {
     };
     SigninPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signin',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/pages/signin/signin.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header class="bordeBajo" >\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n      <div>\n        <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n      </div>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	 <div class="background1 padding">\n    <div class="content1 ion-padding ">\n      <p class="text1 ion-text-center">\n        <span class="bold">Sign in to Xperience</span>\n      </p>\n    </div>\n    <ion-grid>\n  <ion-row>\n    <ion-col class="ion-padding">\n      <div>\n        <div class="backgroundForm">\n          <ion-row>\n            <!-- <form [formGroup]="formgroup" (ngSubmit)="enviar()" col-12> -->\n                <form [formGroup]="formgroup" col-12>\n                <ion-col class="ion-padding">\n                    <div class="input_content">\n                      <ion-input type="text" formControlName="nombre" placeholder="Nombre"></ion-input>\n                      <span class="error1" *ngIf="nombre.hasError(\'required\') && nombre.touched ">Rellene el Campo</span>\n                      <!-- <input type="text" placeholder="Nombre">\n                      <span class="error1">Rellene el Campo</span> -->\n                    </div>\n                    <div class="input_content">\n                        <ion-input type="text" formControlName="apellido" placeholder="Apellido"></ion-input>\n                        <!-- <input type="text" placeholder="Apellido"> -->\n                        <span class="error1" *ngIf="apellido.hasError(\'required\') && apellido.touched ">Rellene el Campo</span>\n                      </div>\n                    <div class="input_content">\n                        <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>\n                        <!-- <input type="email" placeholder="Email"> -->\n                        <span class="error1" *ngIf="email.hasError(\'required\') && email.touched" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address">Rellene el Campo</span>\n                    </div>\n                    <div class="boton_content">\n                        <!-- [disabled]="!isenabled" -->\n                      <button ion-button full color="dark" class="boton" (click)="onclickPageServices()">sign in</button>\n                    </div>\n                  </ion-col>\n            </form>\n          </ion-row>\n          \n        </div>\n      </div>\n    </ion-col>\n  </ion-row>\n</ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/pages/signin/signin.html"*/,
+            selector: 'page-signin',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/thexperience/src/pages/signin/signin.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header class="bordeBajo" >\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n      <div>\n        <img src="../../assets/imgs/logo2.png" class="ion-float-left" class="logo">\n      </div>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	 <div class="background1 padding">\n    <div class="content1 ion-padding ">\n      <p class="text1 ion-text-center">\n        <span class="bold">Sign in to Xperience</span>\n      </p>\n    </div>\n    <ion-grid>\n  <ion-row>\n    <ion-col class="ion-padding">\n      <div>\n        <div class="backgroundForm">\n          <ion-row>\n            <!-- <form [formGroup]="formgroup" (ngSubmit)="enviar()" col-12> -->\n                <form [formGroup]="formgroup" id="form1_1" name="form1_1" col-12>\n                <ion-col class="ion-padding">\n                    <div class="input_content">\n                      <ion-input type="text" formControlName="nombre" placeholder="Nombre"></ion-input>\n                      <span class="error1" *ngIf="nombre.hasError(\'required\') && nombre.touched ">Rellene el Campo</span>\n                      <span class="error1" *ngIf="nombre.hasError(\'minlength\') && nombre.touched ">Minimo 5 caractéres</span>\n                      <!-- <input type="text" placeholder="Nombre">\n                      <span class="error1">Rellene el Campo</span> -->\n                    </div>\n                    <div class="input_content">\n                        <ion-input type="text" formControlName="apellido" placeholder="Apellido"></ion-input>\n                        <!-- <input type="text" placeholder="Apellido"> -->\n                        <span class="error1" *ngIf="apellido.hasError(\'required\') && apellido.touched ">Rellene el Campo</span>\n                        <span class="error1" *ngIf="apellido.hasError(\'minlength\') && apellido.touched ">Minimo 5 caractéres</span>\n                      </div>\n                    <div class="input_content">\n                        <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>\n                        <!-- <input type="email" placeholder="Email"> -->\n                        <span class="error1" *ngIf="email.hasError(\'required\') && email.touched">Rellene el Campo</span>\n                        <span class="error1" *ngIf="email.hasError(\'pattern\') && email.touched">Ejemplo correo@dominio.com</span>\n                        \n                    </div>\n                    <div class="boton_content">\n                        <!-- [disabled]="!isenabled" -->\n                      <button ion-button full color="dark" class="boton" [disabled]="formgroup.invalid" (click)="onclickPageServices()">sign in</button>\n                    </div>\n                  </ion-col>\n            </form>\n          </ion-row>\n          \n        </div>\n      </div>\n    </ion-col>\n  </ion-row>\n</ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/thexperience/src/pages/signin/signin.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -400,20 +411,20 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/activities-menu/activities-menu.module#ActivitiesMenuPageModule', name: 'ActivitiesMenuPage', segment: 'activities-menu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/bienvenido/bienvenido.module#BienvenidoPageModule', name: 'BienvenidoPage', segment: 'bienvenido', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/booked/booked.module#BookedPageModule', name: 'BookedPage', segment: 'booked', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/calendario/calendario.module#CalendarioPageModule', name: 'CalendarioPage', segment: 'calendario', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/calendario2/calendario2.module#Calendario2PageModule', name: 'Calendario2Page', segment: 'calendario2', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/calendario/calendario.module#CalendarioPageModule', name: 'CalendarioPage', segment: 'calendario', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/room-services/room-services.module#RoomServicesPageModule', name: 'RoomServicesPage', segment: 'room-services', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/prueba/prueba.module#PruebaPageModule', name: 'PruebaPage', segment: 'prueba', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/room-services/room-services.module#RoomServicesPageModule', name: 'RoomServicesPage', segment: 'room-services', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/roomkey1/roomkey1.module#Roomkey1PageModule', name: 'Roomkey1Page', segment: 'roomkey1', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/roomkey2/roomkey2.module#Roomkey2PageModule', name: 'Roomkey2Page', segment: 'roomkey2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/seeyou/seeyou.module#SeeyouPageModule', name: 'SeeyouPage', segment: 'seeyou', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/roomkey2/roomkey2.module#Roomkey2PageModule', name: 'Roomkey2Page', segment: 'roomkey2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/selfcheckin/selfcheckin.module#SelfcheckinPageModule', name: 'SelfcheckinPage', segment: 'selfcheckin', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/service-catalog/service-catalog.module#ServiceCatalogPageModule', name: 'ServiceCatalogPage', segment: 'service-catalog', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/selfcheckout/selfcheckout.module#SelfcheckoutPageModule', name: 'SelfcheckoutPage', segment: 'selfcheckout', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/services/services.module#ServicesPageModule', name: 'ServicesPage', segment: 'services', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/selfcheckout/selfcheckout.module#SelfcheckoutPageModule', name: 'SelfcheckoutPage', segment: 'selfcheckout', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/service-catalog/service-catalog.module#ServiceCatalogPageModule', name: 'ServiceCatalogPage', segment: 'service-catalog', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/subservice-catalog/subservice-catalog.module#SubserviceCatalogPageModule', name: 'SubserviceCatalogPage', segment: 'subservice-catalog', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signin/signin.module#SigninPageModule', name: 'SigninPage', segment: 'signin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/yourstay/yourstay.module#YourstayPageModule', name: 'YourstayPage', segment: 'yourstay', priority: 'low', defaultHistory: [] }
@@ -533,6 +544,16 @@ var MyApp = /** @class */ (function () {
     };
     MyApp.prototype.calculateHeightOffer = function (page) {
         var pageElement = document.querySelector(".submenu_content-" + page.title + "-s");
+        if (page.statusClass == "hide-menu") {
+            document.querySelector(".fondo_menu_offers").classList.remove('block');
+            document.querySelector(".footer_menu").classList.remove('margen');
+        }
+        else {
+            document.querySelector(".footer_menu").classList.add('margen');
+            setTimeout(function () {
+                document.querySelector(".fondo_menu_offers").classList.add('block');
+            }, 0);
+        }
         var contentOffers = pageElement.querySelectorAll(".content_offers");
         var heightElements = 0;
         __WEBPACK_IMPORTED_MODULE_6_lodash___default.a.forEach(contentOffers, function (item) {

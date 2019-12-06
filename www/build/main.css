@@ -30584,6 +30584,7 @@ ion-navbar.toolbar {
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
   overflow: hidden;
+  position: relative;
 }
 
 .submenu_content-offers.hide-menu {
@@ -31354,6 +31355,14 @@ page-signin ion-content {
   min-height: 100%;
 }
 
+.menu-inner {
+  min-width: 320px;
+}
+
+.margen {
+  bottom: 0 !important;
+}
+
 .text-input::-moz-placeholder {
   color: #000 !important;
 }
@@ -31387,6 +31396,7 @@ img {
 
 .item-block {
   min-height: 0;
+  padding-left: 38px;
 }
 
 .txt4 {
@@ -31399,6 +31409,7 @@ img {
   font-size: 20px;
   padding-left: 16px;
   text-transform: uppercase;
+  padding-left: 38px;
 }
 
 .menu_abierto .item-inner {
@@ -31444,21 +31455,31 @@ img {
 }
 
 .title_offers {
-  margin-left: 16px;
+  margin-left: 38px;
 }
 
 .block {
-  display: block !important;
+  opacity: 1 !important;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.menu_abierto .iconos_menu ion-icon {
+  padding: 5px;
+}
+
+.menu_abierto .button-ios.activated {
+  background: #d9d9d9;
 }
 
 .fondo_menu_offers {
-  bottom: 209px;
+  bottom: 49px;
   z-index: -1;
   position: absolute;
   height: 210px;
   right: 0;
   width: 120px;
-  display: none;
+  opacity: 0;
 }
 
 .input-wrapper {
@@ -31508,7 +31529,7 @@ img {
 .footer_menu {
   margin: 0 15px 40px 25px;
   position: relative;
-  bottom: 0px;
+  bottom: calc(-100% + 467px);
 }
 
 .back-button-icon-md {
@@ -31817,6 +31838,11 @@ page-room-services .card-service btns-acordeon {
 
 .button {
   white-space: normal;
+}
+
+.assaabloy {
+  max-width: 250px;
+  margin: 50px auto;
 }
 
 .content_buton_key2 {
